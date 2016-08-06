@@ -52,7 +52,7 @@ function gm_mailing_lists_page() {
 				<tr valign="top">
 					<th scope="row">Mailing List Name</th>
 					<td>
-						<input type="text" name="<?php echo $list['id']; ?>_name" class="regular-text code" value="<?php echo $list['name']; ?>" />
+						<input type="text" name="<?php echo $list['id']; ?>_name" class="regular-text code" value="<?php echo $list['name']; ?>" disabled> <!-- @simon -->
 					</td>
 				</tr>
 

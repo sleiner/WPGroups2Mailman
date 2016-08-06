@@ -44,6 +44,7 @@ require_once( GM_PLUGIN_DIR . 'includes/Mailman.php' );
 require_once( GM_PLUGIN_DIR . 'includes/functions.php' );
 require_once( GM_PLUGIN_DIR . 'includes/user-forms.php' );
 require_once( GM_PLUGIN_DIR . 'includes/auto-functions.php' );
+include_once( GM_PLUGIN_DIR . 'includes/groups-integration.php' );
 
 // Admin Only Includes.
 if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
