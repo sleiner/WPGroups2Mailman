@@ -57,5 +57,8 @@ After following the installation instructions, find the "Mailman" menu item on t
 * PHP Code Standard Fixes
 * Fixed bug in user-forms.php where index ids would change when a list is added/removed
 
+= 1.1.0 =
+* Added extension for the Wordpress Groups plugin
+
 == Known Issues ==
 * Re-enabling users set to "nomail" may not always work correctly.

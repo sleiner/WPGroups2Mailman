@@ -4,21 +4,21 @@
  *
  * @package   Mailman
  *
- * @author	Ryan Gyure <me@ryan.gy>
+ * @author	Ryan Gyure <me@ryan.gy>, Simon Leiner <simon@leiner.me>
  * @license   GPL-2.0+
- * @link	  http://blog.ryan.gy/applications/wordpress/gnu-mailman/
- * @copyright 2014 Ryan Gyure
+ * @link	  https://github.com/sleiner/WPGroups2Mailman
+ * @copyright 2014 Ryan Gure, 2016 Simon Leiner
  *
  * @wordpress-plugin
- * Plugin Name:	   GNU-Mailman Integration
- * Plugin URI:		http://blog.ryan.gy/applications/wordpress/gnu-mailman/
+ * Plugin Name:	   WPGroups2Mailman
+ * Plugin URI:		https://github.com/sleiner/WPGroups2Mailman
  * Description:	   GNU-Mailman integration with Wordpress
- * Version:		   1.0.5
- * Author:			Ryan Gyure
- * Author URI:		http://www.ryangyure.com/
+ * Version:		   1.1.0
+ * Author:			Ryan Gyure, Simon Leiner
+ * Author URI:		http://www.ryangyure.com/, https://www.leiner.me
  * License:		   GPL-2.0+
  * License URI:	   http://www.gnu.org/licenses/gpl-2.0.txt
- * GitHub Plugin URI: https://github.com/rgyure/gnu-mailman
+ * GitHub Plugin URI: https://github.com/sleiner/WPGroups2Mailman
  */
 
 // If this file is called directly, abort.

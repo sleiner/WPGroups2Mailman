@@ -1,5 +1,7 @@
-gnu-mailman
-==========
+WPGroups2Mailman
+================
+
+based on the GNU Mailman Plugin by Ryan Gure (http://blog.ryan.gy/applications/wordpress/gnu-mailman/)
 
 GNU Mailman integration with Wordpress
 
