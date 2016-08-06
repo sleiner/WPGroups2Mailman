@@ -47,7 +47,8 @@ class GM_Groups {
 			GM_Groups::get_table_name(),
 			array(
 				'list_id' => $list_id,
-				'capability_id' => $capability_id
+				'capability_id' => $capability_id,
+				'description' => GM_Groups::get_description( $list[ 'name' ] )
 			)
 		);
 	}
@@ -82,7 +83,8 @@ class GM_Groups {
 				if ($old_name != $new_name) {
 					Groups_Capability::update(array(
 						'capability_id' => $capability_id,
-						'capability' => $new_name
+						'capability' => $new_name,
+						'description' => GM_Groups::get_description( $list[ 'name' ] )
 					));
 				}
 			}
@@ -130,6 +132,10 @@ class GM_Groups {
 				) $charset_collate;";
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 		dbDelta( $sql );
+	}
+	
+	public static function get_description( $list_name ) {
+		return "subscribe to Mailman list: $list_name";
 	}
 }
 
