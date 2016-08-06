@@ -37,14 +37,22 @@ if ( ! defined( 'GM_PLUGIN_VERSION' ) ) {
 if ( ! defined( 'GM_PLUGIN_FILE' ) ) {
 	define( 'GM_PLUGIN_FILE', __FILE__ );
 }
+if ( defined( 'GROUPS_CORE_VERSION' ) ) {
+	define( 'GM_GROUPS_ACTIVE', true );
+}
 
 // File Includes.
 require_once( GM_PLUGIN_DIR . 'includes/install.php' );
 require_once( GM_PLUGIN_DIR . 'includes/Mailman.php' );
 require_once( GM_PLUGIN_DIR . 'includes/functions.php' );
-require_once( GM_PLUGIN_DIR . 'includes/user-forms.php' );
 require_once( GM_PLUGIN_DIR . 'includes/auto-functions.php' );
-include_once( GM_PLUGIN_DIR . 'includes/groups-integration.php' );
+
+if ( defined( 'GM_GROUPS_ACTIVE' ) ) {
+	require_once( GM_PLUGIN_DIR . 'includes/groups-integration.php' );
+} else {
+	require_once( GM_PLUGIN_DIR . 'includes/user-forms.php' );
+}
+
 
 // Admin Only Includes.
 if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {

@@ -35,11 +35,8 @@ function gm_user_profile_page( $user ) {
 <?php
 }
 
-// @groups-integration: show only if groups integration not active
-if( !defined( 'GM_GROUPS_ACTIVE' ) ) {
 	add_action( 'show_user_profile', 'gm_user_profile_page' );
 	add_action( 'edit_user_profile', 'gm_user_profile_page' );
-}
 
 /**
  * Function to Handle POST update of User Profile Page
