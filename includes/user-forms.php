@@ -8,32 +8,39 @@
  *
  * @since   1.0.0
  */
-function gm_user_profile_page( $user ) {
-?>
-	<h3>Mailing Lists</h3>
-	<table class="form-table">
-		<?php
-		// Get Current Subscriptions.
-		$mailing_list_subscriptions = gm_get_user_subscriptions( $user->ID );
 
-		// Get Current Mailing Lists and Loop.
-		$mailing_lists = gm_get_mailing_lists();
+if( defined( 'GM_GROUPS_ACTIVE' ) ) {
+	function gm_user_profile_page( $user ) {
+	?>
+		<h3>Mailing Lists</h3>
+		<table class="form-table">
+			<?php
+			// Get Current Subscriptions.
+			$mailing_list_subscriptions = gm_get_user_subscriptions( $user->ID );
 
-		foreach ( $mailing_lists as $list ) {
-			$checked = '';
-			if ( in_array($list['id'], $mailing_list_subscriptions) ) {
-				$checked = ' checked="checked"';
-			}
-			?>
-			<tr>
-				<th><label for="subscribe_<?php echo $list['id'];?>"><?php echo $list['name'];?></label></th>
-				<td><input name="subscribe[]" type="checkbox" id="subscribe_<?php echo $list['id'];?>" value="<?php echo $list['id'];?>" <?php echo $checked;?> /> Subscribe to <?php echo $list['name'];?> list</td>
-			</tr>
-		<?php } ?>
-	</table>
+			// Get Current Mailing Lists and Loop.
+			$mailing_lists = gm_get_mailing_lists();
 
-<?php
+			foreach ( $mailing_lists as $list ) {
+				$checked = '';
+				if ( in_array($list['id'], $mailing_list_subscriptions) ) {
+					$checked = ' checked="checked"';
+				}
+				?>
+				<tr>
+					<th><label for="subscribe_<?php echo $list['id'];?>"><?php echo $list['name'];?></label></th>
+					<td><input name="subscribe[]" type="checkbox" id="subscribe_<?php echo $list['id'];?>" value="<?php echo $list['id'];?>" <?php echo $checked;?> /> Subscribe to <?php echo $list['name'];?> list</td>
+				</tr>
+			<?php } ?>
+		</table>
+
+	<?php
+	}
+} else {
+	function gm_user_profile_page( $user ) {
+	}
 }
+
 
 	add_action( 'show_user_profile', 'gm_user_profile_page' );
 	add_action( 'edit_user_profile', 'gm_user_profile_page' );

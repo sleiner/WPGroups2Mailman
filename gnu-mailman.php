@@ -31,7 +31,7 @@ if ( ! defined( 'GM_PLUGIN_DIR' ) ) {
 }
 
 if ( ! defined( 'GM_PLUGIN_VERSION' ) ) {
-	define( 'GM_PLUGIN_VERSION', '1.0.5' );
+	define( 'GM_PLUGIN_VERSION', '1.1.0' );
 }
 
 if ( ! defined( 'GM_PLUGIN_FILE' ) ) {
@@ -46,11 +46,10 @@ require_once( GM_PLUGIN_DIR . 'includes/install.php' );
 require_once( GM_PLUGIN_DIR . 'includes/Mailman.php' );
 require_once( GM_PLUGIN_DIR . 'includes/functions.php' );
 require_once( GM_PLUGIN_DIR . 'includes/auto-functions.php' );
+require_once( GM_PLUGIN_DIR . 'includes/user-forms.php' );
 
 if ( defined( 'GM_GROUPS_ACTIVE' ) ) {
 	require_once( GM_PLUGIN_DIR . 'includes/groups-integration.php' );
-} else {
-	require_once( GM_PLUGIN_DIR . 'includes/user-forms.php' );
 }
 
 
