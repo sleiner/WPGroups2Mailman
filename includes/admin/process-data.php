@@ -37,7 +37,7 @@ function gm_process_data() {
 				// If list id is 32 chars.
 				if ( 32 === strlen( $list_id ) ) {
 					switch ( $prop_name ) {
-						// case 'name': //@simon
+						case 'name':
 						case 'url':
 						case 'pass':
 						case 'autosub':
@@ -50,7 +50,7 @@ function gm_process_data() {
 			// Store Updated Mailing List Array.
 			gm_set_mailing_lists( $list_array );
 
-			// @simon: trigger edit action
+			// @groups-extension: trigger edit action
 			do_action( 'gm_lists_updated' );
 
 			$url = get_bloginfo( 'wpurl' ) . '/wp-admin/admin.php?page=gnu-mailman-lists&gm_message=list_edit';
@@ -87,7 +87,7 @@ function gm_process_data() {
 			// Store Updated Mailing List Array.
 			gm_set_mailing_lists( $list_array );
 
-			// @simon: trigger add action
+			// @groups-extension: trigger add action
 			do_action( 'gm_list_added' , $unique_id );
 
 			// Redirect.
@@ -137,8 +137,8 @@ function gm_process_data() {
 			// Store Updated Mailing List Array.
 			gm_set_mailing_lists( $list_array );
 
-			// @simon: trigger delete action
-			do_action( 'gm_lists_removed' );
+			// @groups-extension: trigger delete action
+			do_action( 'gm_lists_deleted' );
 
 			// Redirect.
 			$url = get_bloginfo( 'wpurl' ) . '/wp-admin/admin.php?page=gnu-mailman-lists&gm_message=list_removed';

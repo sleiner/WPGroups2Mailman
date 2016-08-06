@@ -15,7 +15,11 @@ function gm_options_install() {
 	add_site_option( 'gnumailman_update_frequency', 60 * 60 );
 	// Set Timeout (30 Seconds).
 	add_site_option( 'gnumailman_default_timeout', 30 );
-
+	
+	// @groups-extension install groups
+	GM_Groups::install();
 }
+
+
 
 register_activation_hook( GM_PLUGIN_FILE, 'gm_options_install' );
