@@ -1,6 +1,6 @@
 <?php
 /*******************************************
- * GNU-Mailman Defaul Admin  Page
+ * GNU-Mailman Default Admin  Page
 *******************************************/
 
 /**
